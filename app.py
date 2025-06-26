@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.molecule_utils import smiles_to_mol_image, calculate_mol_weight, predict_solubility
+from utils.molecule_utils import smiles_to_mol_image, calculate_mol_weight, get_rdk_mol_from_sml, 
 
 st.title("RDKit + Sklearn Streamlit App")
 
