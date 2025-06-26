@@ -4,7 +4,7 @@ from utils.molecule_utils import smiles_to_mol_image, calculate_mol_weight, get_
 st.title(":rainbow[Chemiformatics Assistant To Experimental Chemist]")
 
 # User input for SMILES string
-smiles = st.text_input("Enter SMILES string", "CC(=O)OC1=CC=CC=C1C(=O)O")
+smiles = st.text_input("Enter SMILES string", "e.g CC(=O)OC1=CC=CC=C1C(=O)O")
 
 if smiles:
     # Generate molecule image
