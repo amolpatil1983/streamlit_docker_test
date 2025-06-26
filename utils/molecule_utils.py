@@ -66,7 +66,7 @@ def get_atomic_contributions_to_logp(rdk_mol):
         # Calculate Crippen (logP) contributions for each atom
         at_contribs = rdMolDescriptors._CalcCrippenContribs(rdk_mol)
         # Create a 2D drawing canvas
-        d = Draw.MolDraw2DCairo(400, 400)
+        d = Draw.MolDraw2DCairo(300, 300)
         # Generate similarity map from logP contributions
         SimilarityMaps.GetSimilarityMapFromWeights(rdk_mol, [x[0] for x in at_contribs], draw2d=d)
         d.FinishDrawing()
