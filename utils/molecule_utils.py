@@ -1,5 +1,6 @@
 from rdkit import Chem
 from rdkit.Chem import Draw, Descriptors
+from rdkit.Chem import rdEHTTools
 from sklearn.linear_model import LinearRegression
 import numpy as np
 import os
