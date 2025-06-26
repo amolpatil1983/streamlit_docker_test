@@ -4,8 +4,7 @@ from utils.molecule_utils import smiles_to_mol_image, calculate_mol_weight, get_
 st.title(":rainbow[Chemiformatics Assistant To Experimental Chemist]")
 st.write(
     """
-    Enrich your research with quick cheminformatics analysis.
-    e.g. View atomic contributions to logP values in your molecule.
+    Enrich your research with quick cheminformatics analysis. e.g.\n View atomic contributions to logP values in your molecule.
     """
 )
 
