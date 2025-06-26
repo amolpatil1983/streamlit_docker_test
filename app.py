@@ -2,6 +2,12 @@ import streamlit as st
 from utils.molecule_utils import smiles_to_mol_image, calculate_mol_weight, get_rdk_mol_from_sml, get_atomic_contributions_to_logp 
 
 st.title(":rainbow[Chemiformatics Assistant To Experimental Chemist]")
+st.write(
+    """
+    Enrich your research with quick cheminformatics analysis.
+    e.g. View atomic contributions to logP values in your molecule.
+    """
+)
 
 # User input for SMILES string
 smiles = st.text_input("Enter SMILES string", "e.g CC(=O)OC1=CC=CC=C1C(=O)O")
@@ -21,7 +27,7 @@ if smiles:
     image = get_atomic_contributions_to_logp(rdkmolobj)
     if image:
         st.image(image, caption="Atomic Contributions to LogP") #, use_container_width=True)
-    else:
-        st.warning("Failed to generate visualization. Please check the SMILES string.")
+    #else:
+    #    st.warning("Failed to generate visualization. Please check the SMILES string.")
 
         
