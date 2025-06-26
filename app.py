@@ -5,30 +5,30 @@ st.set_page_config(layout="wide")
 st.title(":rainbow[Cheminformatics Assistant]")
 
 st.info("""
-### 🧪 What It Does  
-Generates a **static 2D map** visualizing atomic contributions to a molecule's **Crippen LogP** value, highlighting how each atom affects **lipophilicity**.
+# 🧪 What It Does?
+Generates a *static 2D map* visualizing atomic contributions to a molecule's *Crippen LogP* value, highlighting how each atom affects *lipophilicity*.
 ---
-### 💡 Why It Matters  
-Mapping LogP contributions helps optimize molecular structures for improved **ADME** properties:  
+# 💡 Why It Matters?
+Mapping LogP contributions helps optimize molecular structures for improved *ADME* properties:  
 *Absorption, Distribution, Metabolism, Excretion* – crucial in drug development.  
 📖 [Lipinski, 2004](https://www.sciencedirect.com/science/article/abs/pii/S0169409X00001290?via%3Dihub)
 ---
-### 🔬 Scientific Basis  
-Based on **Crippen's LogP method**  
+### 🔬 Scientific Basis: 
+Based on *Crippen's LogP method*  
 📖 [Wildman & Crippen, 1999](https://doi.org/10.1021/ci990307l)  
-Calculates **hydrophobicity**, a key factor in drug **solubility**, **membrane permeability**, and **bioavailability**.
+Calculates *hydrophobicity*, a key factor in drug *solubility*, *membrane permeability*, and *bioavailability*.
 ---
-### 🧬 How to Use  
-1. Input a **valid SMILES string** of your molecule in the field below.  
-2. Press **Enter** to generate the visualization.  
-🔧 Need a SMILES string? Try the [PubChem Sketcher](https://pubchem.ncbi.nlm.nih.gov/#input=draw&draw=true) to draw and convert your molecule.
+# 🧬 How to Use  
+1. Input a *valid SMILES string* of your molecule in the field below.  
+2. Press *Enter* to generate the visualization.  
+🔧 *Need a SMILES string?:* Try the [PubChem Sketcher](https://pubchem.ncbi.nlm.nih.gov/#input=draw&draw=true) to draw and convert your molecule.
 ---
-### 🎯 Analyzing Results  
-- **Green atoms**: Contribute to **hydrophobicity**  
-- **Red atoms**: Contribute to **hydrophilicity**  
-Use this insight to identify **key features** influencing lipophilicity and guide your **molecular design**.
+# 🎯 Analyzing Results  
+- *Green atoms*: Contribute to *hydrophobicity* 
+- *Red atoms*: Contribute to *hydrophilicity*
+Use this insight to identify *key features* influencing lipophilicity and guide your *molecular design*.
 ---
-### 🚀 Start mapping your molecule’s potential today!
+## 🚀 Start mapping your molecule’s potential today!
 """)
 
 # User input for SMILES string
