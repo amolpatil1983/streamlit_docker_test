@@ -3,7 +3,7 @@ from utils.molecule_utils import smiles_to_mol_image, calculate_mol_weight, get_
 
 import streamlit as st
 
-st.title("rainbow[Cheminformatics Assistant]")
+st.title(":rainbow[Cheminformatics Assistant]")
 
 st.write("*What It Does*")
 st.write("Generates a static 2D map visualizing atomic contributions to a molecule's CrippenLogP value, highlighting how each atom affects lipophilicity.")
