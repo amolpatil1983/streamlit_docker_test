@@ -19,9 +19,9 @@ if smiles:
     
     rdkmolobj = get_rdk_mol_from_sml(smiles)
     image = get_atomic_contributions_to_logp(rdkmolobj)
-            if image:
-                st.image(image, caption="Atomic Contributions to LogP", use_column_width=True)
-            else:
-                st.warning("Failed to generate visualization. Please check the SMILES string.")
+    if image:
+        st.image(image, caption="Atomic Contributions to LogP", use_column_width=True)
+    else:
+        st.warning("Failed to generate visualization. Please check the SMILES string.")
 
         
