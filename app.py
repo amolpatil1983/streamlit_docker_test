@@ -7,8 +7,8 @@ st.info("This is a beta version under active development.")
 
 st.title(":rainbow[Cheminformatics Assistant]")
 
-st.info("""
-*What It Does?*\n
+st.info(
+    """*What It Does?*\n
 Generates a static 2D map visualizing atomic contributions to a molecule's CrippenLogP value, highlighting how each atom affects lipophilicity.\n
 *Why It Matters?*\nMapping LogP contributions helps optimize molecular structures for improved ADME (absorption, distribution, metabolism, excretion) properties in drug development [Lipinski, 2004](https://www.sciencedirect.com/science/article/abs/pii/S0169409X00001290?via%3Dihub).")
 st.write("*Scientific Basis:*")
