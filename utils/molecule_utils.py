@@ -7,6 +7,8 @@ from rdkit.Chem.Draw import SimilarityMaps
 from sklearn.linear_model import LinearRegression
 import numpy as np
 import os
+import io
+from PIL import Image
 
 def smiles_to_mol_image(smiles, output_path="mol_image.png"):
     try:
