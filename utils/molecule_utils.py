@@ -77,7 +77,7 @@ def molsim(smiles):
         d = Draw.MolDraw2DCairo(400, 400)
         SimilarityMaps.GetSimilarityMapFromWeights(atorvastatin,list(static_chgs),draw2d=d)
         d.FinishDrawing()
-        show_png(d.GetDrawingText())
-        return result
+        # show_png(d.GetDrawingText())
+        return d
     except:
         return None
