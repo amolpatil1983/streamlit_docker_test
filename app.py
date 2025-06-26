@@ -26,8 +26,8 @@ with col2:
     """)
 
 # User input for SMILES string
-smiles = st.text_input("**How to use?:** Input a valid SMILES string of your molecule in the input field below and press 'Enter'. Need a SMILES string? Use the [PubChem Sketcher](https://pubchem.ncbi.nlm.nih.gov/#input=draw&draw=true) to draw your molecule and generate its SMILES.") #, "O=C(O)C[C@H](O)C[C@H](O)CCn2c(c(c(c2c1ccc(F)cc1)c3ccccc3)C(=O)Nc4ccccc4)C(C)C")
-
+smiles = st.text_input("**How to use?:** Input a valid SMILES string of your molecule in the input field below and press 'Enter'.") #, "O=C(O)C[C@H](O)C[C@H](O)CCn2c(c(c(c2c1ccc(F)cc1)c3ccccc3)C(=O)Nc4ccccc4)C(C)C")
+st.write("*Need a SMILES string?* Use the [PubChem Sketcher](https://pubchem.ncbi.nlm.nih.gov/#input=draw&draw=true) to draw your molecule and generate its SMILES.")
 if smiles:
 # Generate molecule image
 #   img_path = smiles_to_mol_image(smiles)
