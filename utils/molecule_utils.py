@@ -57,15 +57,24 @@ def get_rdk_mol_from_sml(smiles):
         return rdk_mol
     except:
         return None
+        
 # Function to show atomic contributions to LogP values
 def get_atomic_contributions_to_logp(rdk_mol):
     try:
+        # Calculate Crippen (logP) contributions for each atom
         at_contribs = rdMolDescriptors._CalcCrippenContribs(rdk_mol)
+        # Create a 2D drawing canvas
         d = Draw.MolDraw2DCairo(400, 400)
-        SimilarityMaps.GetSimilarityMapFromWeights(rdk_mol,[x[0] for x in at_contribs],draw2d=d)
+        # Generate similarity map from logP contributions
+        SimilarityMaps.GetSimilarityMapFromWeights(rdk_mol, [x[0] for x in at_contribs], draw2d=d)
         d.FinishDrawing()
-        show_png(d.GetDrawingText())
-    except:
+        # Convert drawing to PNG bytes
+        png_data = d.GetDrawingText()
+        # Convert PNG bytes to an image for Streamlit
+        image = Image.open(io.BytesIO(png_data))
+        return image
+    except Exception as e:
+        st.error(f"Error processing molecule: {e}")
         return None
         
 def molsim(smiles):
