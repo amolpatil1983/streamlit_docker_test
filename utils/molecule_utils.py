@@ -73,8 +73,7 @@ def get_atomic_contributions_to_logp(rdk_mol):
         # Convert PNG bytes to an image for Streamlit
         image = Image.open(io.BytesIO(png_data))
         return image
-    except Exception as e:
-        st.error(f"Error processing molecule: {e}")
+    except:
         return None
         
 def molsim(smiles):
