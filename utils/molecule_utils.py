@@ -45,3 +45,11 @@ def predict_solubility(smiles):
         return model.predict([features])[0]
     except:
         return None
+
+def molsim(smiles):
+    try:
+        #do something
+        result = smiles
+        return result
+    except:
+        return None
