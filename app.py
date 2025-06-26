@@ -1,7 +1,7 @@
 import streamlit as st
 from utils.molecule_utils import smiles_to_mol_image, calculate_mol_weight, get_rdk_mol_from_sml, get_atomic_contributions_to_logp 
 
-st.title("RDKit + Sklearn Streamlit App")
+st.title(":rainbow[Chemiformatics Assistant To Experimental Chemist]")
 
 # User input for SMILES string
 smiles = st.text_input("Enter SMILES string", "CC(=O)OC1=CC=CC=C1C(=O)O")
