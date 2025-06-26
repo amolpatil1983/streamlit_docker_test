@@ -7,10 +7,10 @@ st.info("This is a beta version under active development.")
 
 st.title(":rainbow[Cheminformatics Assistant]")
 
-st.write("*What It Does?*")
-st.info("Generates a static 2D map visualizing atomic contributions to a molecule's CrippenLogP value, highlighting how each atom affects lipophilicity.")
-st.write("*Why It Matters?*")
-st.info("Mapping LogP contributions helps optimize molecular structures for improved ADME (absorption, distribution, metabolism, excretion) properties in drug development [Lipinski, 2004](https://www.sciencedirect.com/science/article/abs/pii/S0169409X00001290?via%3Dihub).")
+st.info("""
+*What It Does?*\n
+Generates a static 2D map visualizing atomic contributions to a molecule's CrippenLogP value, highlighting how each atom affects lipophilicity.\n
+*Why It Matters?*\nMapping LogP contributions helps optimize molecular structures for improved ADME (absorption, distribution, metabolism, excretion) properties in drug development [Lipinski, 2004](https://www.sciencedirect.com/science/article/abs/pii/S0169409X00001290?via%3Dihub).")
 st.write("*Scientific Basis:*")
 st.info("Based on Crippen's LogP method [Wildman & Crippen, 1999](https://doi.org/10.1021/ci990307l), this tool calculates hydrophobicity, a critical factor in drug solubility, membrane permeability, and bioavailability.")
 st.write("*How to Use?*")
