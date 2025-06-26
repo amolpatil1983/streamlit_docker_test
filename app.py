@@ -19,5 +19,9 @@ if smiles:
     
     rdkmolobj = get_rdk_mol_from_sml(smiles)
     if rdkmolobj:
-        get_atomic_contributions_to_logp(rdkmolobj)
+        img_path = get_atomic_contributions_to_logp(rdkmolobj)
+
+    if img_path:
+        st.image(img_path, caption="Molecule Visualization")
+
         
