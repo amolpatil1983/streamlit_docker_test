@@ -1,5 +1,1 @@
-streamlit==1.28.2
-rdkit
-pillow
-scikit-learn==1.3.2
-numpy==1.24.4
+streamlit==1.28.2 rdkit==2023.9.1 pillow==10.0.1 scikit-learn==1.3.2 numpy==1.24.4
