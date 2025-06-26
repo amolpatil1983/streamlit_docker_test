@@ -10,7 +10,7 @@ st.write(
 )
 
 # User input for SMILES string
-smiles = st.text_input("Enter SMILES string", "e.g CC(=O)OC1=CC=CC=C1C(=O)O")
+smiles = st.text_input("Enter SMILES string, e.g O=C(O)C[C@H](O)C[C@H](O)CCn2c(c(c(c2c1ccc(F)cc1)c3ccccc3)C(=O)Nc4ccccc4)C(C)C for atorvastatin")
 
 if smiles:
     # Generate molecule image
