@@ -17,7 +17,7 @@ if smiles:
     if mol_weight:
         st.write(f"Molecular Weight: {mol_weight:.2f} g/mol")
     
-    rdkmolobj = smiles_to_rdk_mol(smiles)
+    rdkmolobj = get_rdk_mol_from_sml(smiles)
     if rdkmolobj:
         get_atomic_contributions_to_logp(rdkmolobj)
         
