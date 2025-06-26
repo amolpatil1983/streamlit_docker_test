@@ -15,7 +15,7 @@ def smiles_to_mol_image(smiles, output_path="mol_image.png"):
         mol = Chem.MolFromSmiles(smiles)
         if mol is None:
             return None
-        Draw.MolToFile(mol, output_path, size=(200, 200))
+        Draw.MolToFile(mol, output_path, size=(300, 300))
         return output_path
     except:
         return None
@@ -66,7 +66,7 @@ def get_atomic_contributions_to_logp(rdk_mol):
         # Calculate Crippen (logP) contributions for each atom
         at_contribs = rdMolDescriptors._CalcCrippenContribs(rdk_mol)
         # Create a 2D drawing canvas
-        d = Draw.MolDraw2DCairo(200, 200)
+        d = Draw.MolDraw2DCairo(300, 300)
         # Generate similarity map from logP contributions
         SimilarityMaps.GetSimilarityMapFromWeights(rdk_mol, [x[0] for x in at_contribs], draw2d=d)
         d.FinishDrawing()
