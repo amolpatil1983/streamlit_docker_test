@@ -7,7 +7,7 @@ st.title(":rainbow[Cheminformatics Assistant]")
 col1, col2 = st.columns([1, 2])
 
 with col1:
-    st.image(get_atomic_contributions_to_logp(get_rdk_mol_from_sml("O=C(O)C[C@H](O)C[C@H](O)CCn2c(c(c(c2c1ccc(F)cc1)c3ccccc3)C(=O)Nc4ccccc4)C(C)C")), caption="Example Atomic Contributions to LogP, Atorvastatin", use_column_width=True)
+    st.image(get_atomic_contributions_to_logp(get_rdk_mol_from_sml("O=C(O)C[C@H](O)C[C@H](O)CCn2c(c(c(c2c1ccc(F)cc1)c3ccccc3)C(=O)Nc4ccccc4)C(C)C")), caption="Example Atomic Contributions to LogP, Atorvastatin", use_container_width=True)
 
 with col2:
     st.info("""
