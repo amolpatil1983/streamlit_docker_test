@@ -30,22 +30,22 @@ with col2:
 # User input for SMILES string
 smiles = st.text_input("Enter SMILES string") #, "O=C(O)C[C@H](O)C[C@H](O)CCn2c(c(c(c2c1ccc(F)cc1)c3ccccc3)C(=O)Nc4ccccc4)C(C)C")
 
-#if smiles:
-    # Generate molecule image
- #   img_path = smiles_to_mol_image(smiles)
- #   if img_path:
- #       st.image(img_path, caption="Molecule Visualization")
+if smiles:
+# Generate molecule image
+#   img_path = smiles_to_mol_image(smiles)
+#   if img_path:
+#       st.image(img_path, caption="Molecule Visualization")
     
-    # Calculate molecular weight
-  #  mol_weight = calculate_mol_weight(smiles)
-  #  if mol_weight:
-  #      st.write(f"Molecular Weight: {mol_weight:.2f} g/mol")
+#    # Calculate molecular weight
+#  #  mol_weight = calculate_mol_weight(smiles)
+#  #  if mol_weight:
+#  #      st.write(f"Molecular Weight: {mol_weight:.2f} g/mol")
     
     rdkmolobj = get_rdk_mol_from_sml(smiles)
     image = get_atomic_contributions_to_logp(rdkmolobj)
     if image:
         st.image(image, caption="Atomic Contributions to LogP") #, use_container_width=True)
-    #else:
-    #    st.warning("Failed to generate visualization. Please check the SMILES string.")
+    else:
+        st.warning("Failed to generate visualization. Please check the SMILES string.")
 
         
