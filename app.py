@@ -21,3 +21,7 @@ if smiles:
     solubility = predict_solubility(smiles)
     if solubility:
         st.write(f"Predicted Solubility (logS): {solubility:.2f}")
+    
+    rdkmolobj = smiles_to_rdk_mol(smiles)
+    if rdkmolobj:
+        
