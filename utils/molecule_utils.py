@@ -1,6 +1,9 @@
 from rdkit import Chem
 from rdkit.Chem import Draw, Descriptors
 from rdkit.Chem import rdEHTTools
+from rdkit.Chem import rdDistGeom
+from rdkit.Chem import rdMolDescriptors
+from rdkit.Chem.Draw import SimilarityMaps
 from sklearn.linear_model import LinearRegression
 import numpy as np
 import os
@@ -47,10 +50,34 @@ def predict_solubility(smiles):
     except:
         return None
 
+# MolFromSmiles
+def get_rdk_mol_from_sml(smiles):
+    try:
+        rdk_mol = Chem.MolFromSmiles(smiles)
+        return rdk_mol
+    except:
+        return None
+# Function to show atomic contributions to LogP values
+def get_atomic_contributions_to_logp(rdk_mol):
+    try:
+        at_contribs = rdMolDescriptors._CalcCrippenContribs(rdk_mol)
+        d = Draw.MolDraw2DCairo(400, 400)
+        SimilarityMaps.GetSimilarityMapFromWeights(rdk_mol,[x[0] for x in at_contribs],draw2d=d)
+        d.FinishDrawing()
+        show_png(d.GetDrawingText())
+    except:
+        return None
+        
 def molsim(smiles):
     try:
-        #do something
-        result = smiles
+        mh = Chem.AddHs(smiles)
+        rdDistGeom.EmbedMolecule(mh)
+        _,res = rdEHTTools.RunMol(mh)
+        static_chgs = res.GetAtomicCharges()[:atorvastatin.GetNumAtoms()]
+        d = Draw.MolDraw2DCairo(400, 400)
+        SimilarityMaps.GetSimilarityMapFromWeights(atorvastatin,list(static_chgs),draw2d=d)
+        d.FinishDrawing()
+        show_png(d.GetDrawingText())
         return result
     except:
         return None
